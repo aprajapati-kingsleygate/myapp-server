@@ -13,6 +13,7 @@ const userRouter = require("./routes/userRouter")
 const authRouter = require("./routes/authRouter")
 const SSEManager = require("./sseManager")
 
+console.log("Hello")
 
 const app = express();
 app.use(morgan("tiny"));
