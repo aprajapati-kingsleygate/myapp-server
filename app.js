@@ -11,6 +11,7 @@ require("./models/userModels")
 //require modules
 const userRouter = require("./routes/userRouter")
 const authRouter = require("./routes/authRouter")
+const demoRouter = require("./routes/demoRouter")
 const SSEManager = require("./sseManager")
 
 console.log("Hello")
@@ -20,6 +21,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use("/api/v1/auth",authRouter);
 app.use("/api/v1/user",userRouter);
+app.use("/api/v1/demo",demoRouter);
 app.get("/",(req,res)=>res.send("Welcome !"))
 const REGION = "us-east-1";
 const client = new BedrockClient({ region: REGION,
